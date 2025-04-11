@@ -1,0 +1,101 @@
+.coming_soon {
+	background-color: #ebebe7;
+	text-align: center;
+	padding: 4px 0;
+	a {
+		color: #232323;
+		font-size: .8rem;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+}
+
+.nav_header {
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 60px;
+	justify-content: center;
+	align-items: center;
+	.logo_lost_kitchen {
+		width: 50%;
+		margin: auto;
+	}
+	a {
+		color: #232323;
+	}
+	ul > li:hover > a {
+		text-decoration: underline;
+	}
+	i {
+		font-size: 1.5rem;
+	}
+	& > *:not(.logo_lost_kitchen) {
+		margin: 0 .6rem;
+	}
+	.navigation{
+		display: none;
+	}
+	@media screen and (min-width:960px){
+		justify-content: space-between;
+		max-width: 1400px;
+		margin: auto;
+		.logo_lost_kitchen {
+			width: 100%;
+		}
+		.burger {
+			display: none;
+		}
+		.navigation{
+			display: flex;
+		}
+	}
+}
+
+.burger > *{
+	width: 1.2rem;
+	height: 2px;
+	background-color: #232323;
+	margin: .3rem 0;
+	border-radius: 4px;
+}
+
+.logo_lost_kitchen img{
+	margin: auto;
+	max-width: 550px;
+}
+
+.navigation {
+	width: 625px;
+	display: flex;
+	padding: 12px 0;
+	&>ul {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		padding: 0;
+	}
+	li {
+		display: inline-block;
+		position: relative;
+	}
+	.subnav{
+		width: 250px;
+		position: absolute;
+		left: -16px;
+		display: flex;
+		flex-direction: column;
+		z-index: 1;
+		padding: 16px 20px;
+		background-color: #fff;
+		border: solid 1px #000;
+		visibility: hidden;
+		transition: .3s all ease-in-out;
+	}
+	.nav:hover .subnav{
+		visibility: visible;
+	}
+	a {
+		color: #232323;
+	}
+}
